@@ -1,8 +1,8 @@
 name: CJMonitorFlutter
 description: A new flutter plugin project.
 version: 0.0.1
-author:
-homepage:
+author: dvlproad
+homepage: https://www.jianshu.com/u/498d9e6a26e1
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
