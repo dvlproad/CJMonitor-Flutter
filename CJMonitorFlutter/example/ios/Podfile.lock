@@ -1,0 +1,22 @@
+PODS:
+  - CJMonitorFlutter (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - CJMonitorFlutter (from `.symlinks/plugins/CJMonitorFlutter/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  CJMonitorFlutter:
+    :path: ".symlinks/plugins/CJMonitorFlutter/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  CJMonitorFlutter: f2721feec1783f0dc1396301b18d1842ec9a248c
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
+
+COCOAPODS: 1.9.3
