@@ -4,7 +4,7 @@ import CJMonitor
 
 public class SwiftCjMonitorFlutterPlugin: NSObject, FlutterPlugin {
   public static func register(with registrar: FlutterPluginRegistrar) {
-    let channel = FlutterMethodChannel(name: "cj_monitor_flutter", binaryMessenger: registrar.messenger())
+    let channel = FlutterMethodChannel(name: "com.dvlproad.channel_cj_monitor_flutter", binaryMessenger: registrar.messenger())
     let instance = SwiftCjMonitorFlutterPlugin()
     registrar.addMethodCallDelegate(instance, channel: channel)
   }
