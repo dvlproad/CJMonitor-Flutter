@@ -10,4 +10,9 @@ class CjMonitorFlutter {
     final String version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
+
+  static Future<String> get showLogSuspendWindow async {
+    final String version = await _channel.invokeMethod('showLogSuspendWindow');
+    return version;
+  }
 }

@@ -42,6 +42,23 @@ class _MyAppState extends State<MyApp> {
     });
   }
 
+  Future<void> showLogWindow() async {
+    String platformVersion;
+    // Platform messages may fail, so we use a try/catch PlatformException.
+    try {
+      platformVersion = await CjMonitorFlutter.showLogSuspendWindow;
+    } on PlatformException {
+      platformVersion = 'Failed to get platform version.';
+    }
+
+    // If the widget was removed from the tree while the asynchronous platform
+    // message was in flight, we want to discard the reply rather than calling
+    // setState to update our non-existent appearance.
+    if (!mounted) return;
+
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,7 +67,18 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            children: <Widget>[
+              Text('Running on: $_platformVersion\n'),
+              FlatButton(
+                child: Text('显示Log窗口'),
+                onPressed: () {
+                  print('显示Log窗口');
+                  this.showLogWindow();
+                },
+              )
+            ],
+          ),
         ),
       ),
     );

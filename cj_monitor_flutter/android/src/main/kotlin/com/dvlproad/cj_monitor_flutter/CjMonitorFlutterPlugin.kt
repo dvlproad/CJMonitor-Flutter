@@ -42,6 +42,9 @@ public class CjMonitorFlutterPlugin: FlutterPlugin, MethodCallHandler {
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     if (call.method == "getPlatformVersion") {
       result.success("Android ${android.os.Build.VERSION.RELEASE}")
+    } else if ("showLogSuspendWindow" == call.method) {
+      print("正在显示Log窗口")
+      result.success("显示LogSuspendWindow后的回传给Flutter的信息");
     } else {
       result.notImplemented()
     }

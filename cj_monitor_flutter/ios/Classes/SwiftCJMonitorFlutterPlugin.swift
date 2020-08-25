@@ -9,6 +9,13 @@ public class SwiftCjMonitorFlutterPlugin: NSObject, FlutterPlugin {
   }
 
   public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
-    result("iOS " + UIDevice.current.systemVersion)
+    if ("getPlatformVersion" == call.method) {
+        result("iOS " + UIDevice.current.systemVersion)
+    } else if ("showLogSuspendWindow" == call.method) {
+        print("正在显示Log窗口")
+        result("显示LogSuspendWindow后的回传给Flutter的信息");
+    } else {
+        result(FlutterMethodNotImplemented);
+    }
   }
 }
