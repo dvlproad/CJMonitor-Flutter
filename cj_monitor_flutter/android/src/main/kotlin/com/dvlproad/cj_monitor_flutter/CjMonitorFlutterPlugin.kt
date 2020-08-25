@@ -34,7 +34,7 @@ public class CjMonitorFlutterPlugin: FlutterPlugin, MethodCallHandler {
   companion object {
     @JvmStatic
     fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "com.dvlproad.channel_cj_monitor_flutter")
+      val channel = MethodChannel(registrar.messenger(), "cj_monitor_flutter")
       channel.setMethodCallHandler(CjMonitorFlutterPlugin())
     }
   }
